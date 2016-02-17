@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+var hu_webpart_id = 1 ; 
+var hu_comm_id = 23; 
+var huarr = huarr || [];
+huarr.push(['_createWebpart', hu_webpart_id + ',' + hu_comm_id]);
+(function () {
+var hu = document.createElement('script');
+hu.id = 'hu_webpartid' + hu_webpart_id;
+hu.type = 'text/javascript'; hu.async = true;
+hu.src = ('https:' == document.location.protocol ? 'https://' : 'http://') +
+'www.healthunlocked.com/choices.v6.js';
+var s =
+document.getElementsByTagName('script')[document.getElementsByTagName('script').length - 1]; s.parentNode.insertBefore(hu, s);})();
+</script>
+</body>
+</html>
