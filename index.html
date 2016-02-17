@@ -1,24 +1,52 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
-
-
+<br>
 <script type="text/javascript">
-var hu_webpart_id = 1 ; 
-var hu_comm_id = 23; 
-var huarr = huarr || [];
+
+
+
+var hu_webpart_id = 4;
+var hu_comm_id = 62;var huarr = huarr || [];
 huarr.push(['_createWebpart', hu_webpart_id + ',' + hu_comm_id]);
 (function () {
 var hu = document.createElement('script');
+
+      
 hu.id = 'hu_webpartid' + hu_webpart_id;
 hu.type = 'text/javascript'; hu.async = true;
 hu.src = ('https:' == document.location.protocol ? 'https://' : 'http://') +
 'www.healthunlocked.com/choices.v6.js';
-var s =
-document.getElementsByTagName('script')[document.getElementsByTagName('script').length - 1]; s.parentNode.insertBefore(hu, s);})();
+var s = 
+document.getElementsByTagName('script')[document.getElementsByTagName('script').length -1];
+s.parentNode.insertBefore(hu, s);
+})();
+
+//Used for styling the elements
+setTimeout(function(){
+
+var att = document.createAttribute("id");
+att.value = "changeme";
+var wrapper = document.getElementsByClassName("healthunlocked_wrapper");
+wrapper[0].setAttributeNode(att);
+
+var specifics = document.getElementById("changeme").getElementsByTagName('p');
+var headerh4 = document.getElementById("changeme").getElementsByTagName('h4');
+
+     
+var x;
+for(x=0;x<specifics.length;x++){
+  var stylex= document.createAttribute("style"); 
+  stylex.value = "border-top: solid 1px C5C8C6; padding-top:5px; color:#363636; font-size:0.85em";
+  specifics[x].setAttributeNode(stylex); 
+
+  var stylex2= document.createAttribute("style");
+  stylex2.value = "margin-bottom:5px; color:rgb(48, 189, 122); font-size:1.1em";
+  headerh4[x].setAttributeNode(stylex2);  
+  
+} 
+
+
+
+},5000);
+
+
+
 </script>
-</body>
-</html>
